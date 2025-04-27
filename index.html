@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MaxWin Detector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#121212">
+</head>
+<body>
+    <div class="container">
+        <h1>MaxWin Detector</h1>
+        <div class="upload-section">
+            <label for="image-upload" class="upload-label">
+                <div id="upload-icon">📷</div>
+                <div id="upload-text">Сделать анализ слота</div>
+            </label>
+            <input type="file" id="image-upload" accept="image/*" hidden>
+        </div>
+        
+        <div class="preview-section" id="preview-section" style="display: none;">
+            <div class="image-container">
+                <img id="preview-image" alt="Загруженное фото">
+                <div class="blur-overlay" id="blur-overlay"></div>
+            </div>
+            
+            <button id="analyze-button" class="analyze-button">Сделать анализ слота</button>
+            
+            <div class="results" id="results" style="display: none;">
+                <div class="result-item">
+                    <div class="result-label">Шанс бонуски:</div>
+                    <div class="result-value" id="win-chance">0%</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Через вращений:</div>
+                    <div class="result-value" id="rotations">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="id-display" class="id-display"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
